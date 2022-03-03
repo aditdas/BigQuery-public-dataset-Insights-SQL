@@ -1,0 +1,3 @@
+--1.Which countries have used GDP as the indicator and what is the value?
+SELECT country_name,value,indicator_name FROM `bigquery-public-data.world_bank_intl_education.international_education`
+WHERE indicator_name LIKE "%GDP%";
