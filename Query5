@@ -1,0 +1,6 @@
+--5. Selecting the county of residence, births where the abnormal conditions is not 'none checked', avg birth and ordering it in desc order.
+SELECT county_of_Residence,Abnormal_Conditions_Checked_Desc,Births
+FROM `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality_by_abnormal_conditions`
+where not Abnormal_Conditions_Checked_Desc='None checked'
+AND Births<(select AVG(Births)from `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality_by_abnormal_conditions`)
+ORDER BY Births DESC;
