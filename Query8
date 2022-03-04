@@ -1,5 +1,5 @@
 --8.(JOIN) Joining county of residence from t1 and t2 where source of payment is self pay.
-SELECT t1.County_of_Residence,t2.Fathers_Single_Race,t1.Births
+SELECT t1.County_of_Residence,t2.Fathers_Single_Race,t1.Births, source_of_payment
 FROM `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality_by_payment` t1
 inner join `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality_by_father_race` t2
 on t1.County_of_Residence=t2.County_of_Residence
