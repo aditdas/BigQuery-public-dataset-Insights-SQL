@@ -1,0 +1,3 @@
+--3. Country where indicator name has "mortality rate".
+ SELECT country_name,value,indicator_name FROM `bigquery-public-data.world_bank_intl_education.international_education`
+WHERE indicator_name LIKE "%Mortality rate%";
