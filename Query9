@@ -1,0 +1,4 @@
+--9. County of Residence with "CA" and births between 20000 AND 40000.
+SELECT County_of_Residence, Births FROM `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality` 
+WHERE County_of_Residence LIKE "%CA"
+ Births between 20000 and 40000;
