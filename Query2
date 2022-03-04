@@ -1,0 +1,6 @@
+--2. Grouping by the country's name and ordering the average value
+SELECT country_name,avg(value)  as avg_value
+FROM `bigquery-public-data.world_bank_intl_education.international_education`
+GROUP BY country_name
+ORDER BY avg_value ASC;
+
