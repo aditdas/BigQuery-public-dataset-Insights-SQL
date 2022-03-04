@@ -1,4 +1,4 @@
---4.(JOIN) Joining country code from edu and ser.
+--4.(JOIN) Joining country code from edu and ser with the indicator name, value and description.
 SELECT edu.country_code,edu.indicator_name,edu.value,ser.description
 FROM `bigquery-public-data.world_bank_intl_education.international_education` edu
 LEFT JOIN `bigquery-public-data.world_bank_intl_education.country_series_definitions` ser
