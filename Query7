@@ -1,0 +1,7 @@
+--7.(JOIN) Joining county of residence from t1 and t2 where maternal mobility and congential abnormality are not 'none checked'.
+SELECT t1.County_of_Residence,t1.Births,t1.Ave_Pre_pregnancy_BMI
+FROM `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality_by_maternal_morbidity` t1
+INNER JOIN `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality_by_congenital_abnormalities` t2
+ON t1.County_of_Residence=t2.County_of_Residence
+WHERE Not Maternal_Morbidity_Desc='None checked'
+AND  Not Congenital_Abnormality_Checked_Desc='None checked';
