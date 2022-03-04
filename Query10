@@ -1,0 +1,4 @@
+--10. Selecting avg weight gms, age of mother where county of residence is not LA and avg age of mother is between 30 and 32.
+SELECT County_of_Residence, Births, Ave_Birth_Weight_gms,Ave_Age_of_Mother FROM `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality` 
+WHERE not County_of_Residence LIKE "%LA%"
+and Ave_Age_of_Mother between 30 and 32;
