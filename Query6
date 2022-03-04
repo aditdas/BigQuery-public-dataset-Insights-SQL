@@ -1,0 +1,3 @@
+--6. County of Residence where average age of mother is between 27 and 30.
+SELECT County_of_Residence,Ave_Age_of_Mother,Births FROM `bigquery-public-data.sdoh_cdc_wonder_natality.county_natality`
+WHERE Ave_Age_of_Mother BETWEEN 27 AND 30;
